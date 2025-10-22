@@ -1,0 +1,24 @@
+{
+  "name": "simulador-fifo",
+  "version": "1.0.0",
+  "description": "simulador de processos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diogoSgermano/simulador-fifo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diogoSgermano/simulador-fifo/issues"
+  },
+  "homepage": "https://github.com/diogoSgermano/simulador-fifo#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
