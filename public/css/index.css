@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: rgb(225, 228, 230);
+}
+.title{
+    font: 5em monospace;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+button{
+    display: flex ;
+    color: white;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font: 3em monospace;
+    background-color: rgb(0, 68, 255);
+    border-radius: 50px;
+    width: 250px;
+    height: 100px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}

@@ -1,0 +1,25 @@
+body{
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: rgb(225, 228, 230);
+}
+
+.titleCriar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 3em monospace;
+}
+
+.divInputs,.inputName, .inputTime{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(225, 228, 230);
+
+}
+
+.inputName{
+    margin-bottom: 20px;
+}
