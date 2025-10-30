@@ -88,3 +88,23 @@ body{
 .pagina8{ background-color: black; color: white; }
 .pagina9{ background-color: palevioletred; }
 .pagina10{ background-color: gold; }
+
+.espaco {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    border-radius: 5px;
+    font-family: monospace;
+    font-weight: bold;
+    background-color: aqua;
+}
+
+.espacoRAM{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Cria 2 colunas de largura igual */
+    gap: 10px;
+    height: 85vh;
+}   
