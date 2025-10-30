@@ -20,6 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Evento de clique para redirecionar para a página criar.html
     startButton.addEventListener('click', () => {
-        window.location.href = "criar.html";
+        window.location.href = "simulador.html";
     });
 });

@@ -1,0 +1,90 @@
+body{
+    background-color: rgb(196, 202, 206);
+}
+
+.title{
+    font: 5em monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px; 
+}
+
+.mainContainer{
+    background-color: rgb(230, 224, 224);
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    border-radius: 5px;
+    border: 5px solid rgb(0, 0, 0) !important;    
+}
+
+.leftContainer{
+    width: 70%;
+    position: relative; /* Torna este o container de referência para os filhos */
+    min-height: 400px; /* Define uma altura mínima para o container */
+    background-color: rgb(255, 238, 238) ;
+    padding: 10px; /* Adiciona um espaçamento interno */
+    height: 100vh;
+}
+.rightContainer{
+    width: 30%;
+    background-color: rgb(94, 98, 131) ;
+    padding: 10px;
+}
+
+.RAM{
+    position: absolute; /* Posicionamento absoluto */
+    top: 10px; /* Distância do topo */
+    left: 10px; /* Distância da esquerda */
+    background-color: rgb(255, 0, 0);
+    padding: 50px;
+}
+
+.disco{
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Distância da direita */
+    background-color: rgb(0, 81, 255); /* Cor de exemplo */
+    padding: 50px;
+}
+
+.filaAguardando{
+    position: absolute;
+    bottom: 10px; /* Distância do fundo */
+    right: 10px;
+    background-color: rgb(255, 230, 0); /* Cor de exemplo */
+    padding: 50px;
+    width:500px;
+}
+
+/* Container das páginas */
+.paginas {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Cria 2 colunas de largura igual */
+    gap: 10px;
+    height: 100vh;
+}
+
+/* Estilo genérico para cada página individual */
+.pagina {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    border-radius: 5px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.pagina1{ background-color: red; }
+.pagina2{ background-color:blue ; }
+.pagina3{ background-color: yellow; }
+.pagina4{ background-color: green; }
+.pagina5{ background-color:white ; }
+.pagina6{ background-color: orange ; }
+.pagina7{ background-color: purple; color: white; }
+.pagina8{ background-color: black; color: white; }
+.pagina9{ background-color: palevioletred; }
+.pagina10{ background-color: gold; }
