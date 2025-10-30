@@ -8,82 +8,122 @@
 
 </head>
 <body>
-    <h1 class="title">Simulador</h1>
+    <h1 class="title" id="title">Simulador</h1>
 
-    <div class="mainContainer">
-        <div class="leftContainer">
-            <div class="RAM">
-                <div class="espacoRAM">
-                <div class="espaco espaco1">
-                    espaco 1
+    <div class="mainContainer" id="mainContainer">
+        <div class="leftContainer" id="leftContainer">
+            <svg id="svg-canvas"></svg> <!-- Tela para desenhar as linhas -->
+            <div class="espacoRAM" id="espacoRAM">
+                <div class=" espaco espaco1" id="espaco1">
+                    <div class="textEspaco textEspaco1" id="textEspaco1">
+                        <p>Espaço 1</p>
+                    </div>
                 </div>
-                <div class="espaco espaco2">
-                    espaco 2
+                <div class=" espaco espaco2" id="espaco2">
+                    <div class="textEspaco textEspaco2" id="textEspaco2">
+                        <p>Espaço 2</p>
+                    </div>
                 </div>
-                <div class="espaco espaco3">
-                    espaco 3
+                <div class=" espaco espaco3" id="espaco3">
+                    <div class="textEspaco textEspaco3" id="textEspaco3">
+                        <p>Espaço 3</p>
+                    </div>
                 </div>
-                <div class="espaco espaco4">
-                    espaco 4
+                <div class=" espaco espaco4" id="espaco4">
+                    <div class="textEspaco textEspaco4" id="textEspaco4">
+                        <p>Espaço 4</p>
+                    </div>
                 </div>
-                <div class="espaco espaco5">
-                    espaco 5
+                <div class=" espaco espaco5" id="espaco5">
+                    <div class="textEspaco textEspaco5" id="textEspaco5">
+                        <p>Espaço 5</p>
+                    </div>
                 </div>
-                <div class="espaco espaco6">
-                    espaco 6
+                <div class=" espaco espaco6" id="espaco6">
+                    <div class="textEspaco textEspaco6" id="textEspaco6">
+                        <p>Espaço 6</p>
+                    </div>
                 </div>
-                <div class="espaco espaco7">
-                    espaco 7
+                <div class=" espaco espaco7" id="espaco7">
+                    <div class="textEspaco textEspaco7" id="textEspaco7">
+                        <p>Espaço 7</p>
+                    </div>
                 </div>
-                <div class="espaco espaco8">
-                    espaco 8
-                </div>
-                <div class="espaco espaco9">
-                    espaco 9
-                </div>
-                <div class="espaco espaco10">
-                    espaco 10
+                <div class=" espaco espaco8" id="espaco8">
+                    <div class="textEspaco textEspaco8" id="textEspaco8">
+                        <p>Espaço 8</p>
+                    </div>
                 </div>
             </div>
+            <div class="disco" id="disco">
+                <p>I/O DISCO</p>
             </div>
-            <div class="disco">
-                acessando o disco
-            </div>
-            <div class="filaAguardando">
+            <div class="filaAguardando" id="filaAguardando">
                     aguardando
             </div>
         </div>
-        <div class="rightContainer">
-            <div class="paginas">
-                <div class="pagina pagina1">
-                    pagina 1
+        <div class="rightContainer" id="rightContainer">
+            <button id="resetButton" class="reset-button">Resetar Simulação</button>
+            <div class="paginas" id="paginas">
+                <div class="pagina pagina1" id="pagina1">
+                    <div class="textPag textPag1" id="textPag1">
+                        <p>Página 1</p>
+                        <p id="pg1">Bit de referência: 1</p>
+                    </div>    
                 </div>
-                <div class="pagina pagina2">
-                    pagina 2
+                <div class="pagina pagina2" id="pagina2">
+                    <div class="textPag textPag2" id="textPag2">
+                        <p>Página 2</p>
+                        <p id="pg2">Bit de referência: 0</p>
+                    </div>
                 </div>
-                <div class="pagina pagina3">
-                    pagina 3
+                <div class="pagina pagina3" id="pagina3">
+                    <div class="textPag textPag3" id="textPag3">
+                        <p>Página 3</p>
+                        <p id="pg3">Bit de referência: 1</p>
+                    </div>
                 </div>
-                <div class="pagina pagina4">
-                    pagina 4
+                <div class="pagina pagina4" id="pagina4">
+                    <div class="textPag textPag4" id="textPag4">
+                        <p>Página 4</p>
+                        <p id="pg4">Bit de referência: 0</p>
+                    </div>
                 </div>
-                <div class="pagina pagina5">
-                    pagina 5
+                <div class="pagina pagina5" id="pagina5">
+                    <div class="textPag textPag5" id="textPag5">
+                        <p>Página 5</p>
+                        <p id="pg5">Bit de referência: 0</p>
+                    </div>
                 </div>
-                <div class="pagina pagina6">
-                    pagina 6
+                <div class="pagina pagina6" id="pagina6">
+                    <div class="textPag textPag6" id="textPag6">
+                        <p>Página 6</p>
+                        <p id="pg6">Bit de referência: 1</p>
+                    </div>
                 </div>
-                <div class="pagina pagina7">
-                    pagina 7
+                <div class="pagina pagina7" id="pagina7">
+                    <div class="textPag textPag7" id="textPag7">
+                        <p>Página 7</p>
+                        <p id="pg7">Bit de referência: 1</p>
+                    </div>
                 </div>
-                <div class="pagina pagina8">
-                    pagina 8
+                <div class="pagina pagina8" id="pagina8">
+                    <div class="textPag textPag8" id="textPag8">
+                        <p>Página 8</p>
+                        <p id="pg8">Bit de referência: 0</p>
+                    </div>
                 </div>
-                <div class="pagina pagina9">
-                    pagina 9
+                <div class="pagina pagina9" id="pagina9">
+                    <div class="textPag textPag9" id="textPag9">
+                        <p>Página 9</p>
+                        <p id="pg9">Bit de referência: 1</p>
+                    </div>
                 </div>
-                <div class="pagina pagina10">
-                    pagina 10
+                <div class="pagina pagina10" id="pagina10">
+                    <div class="textPag textPag10" id="textPag10">
+                        <p>Página 10</p>
+                        <p id="pg10">Bit de referência: 0</p>
+                    </div>
                 </div>
             </div>
         </div>

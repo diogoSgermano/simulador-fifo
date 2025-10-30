@@ -11,51 +11,113 @@ body{
 }
 
 .mainContainer{
-    background-color: rgb(230, 224, 224);
+    background-color: rgb(181, 228, 11);
     display: flex;
-    align-items: center;
-    justify-content: center;    
+    justify-content: center;
     border-radius: 5px;
-    border: 5px solid rgb(0, 0, 0) !important;    
+    border: 5px solid rgb(0, 0, 0) !important;   
+    
 }
 
 .leftContainer{
-    width: 70%;
+    width: 90%;
     position: relative; /* Torna este o container de referência para os filhos */
     min-height: 400px; /* Define uma altura mínima para o container */
-    background-color: rgb(255, 238, 238) ;
+    background-color: white ;
     padding: 10px; /* Adiciona um espaçamento interno */
-    height: 100vh;
-}
-.rightContainer{
-    width: 30%;
-    background-color: rgb(94, 98, 131) ;
-    padding: 10px;
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    display: flex; /* Habilita flexbox para organizar os filhos */
 }
 
-.RAM{
-    position: absolute; /* Posicionamento absoluto */
-    top: 10px; /* Distância do topo */
-    left: 10px; /* Distância da esquerda */
-    background-color: rgb(255, 0, 0);
-    padding: 50px;
+/* Estilo para a "tela" de desenho das linhas */
+#svg-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Impede que o SVG capture eventos do mouse */
+    z-index: 10; /* Garante que as linhas fiquem sobre os outros elementos */
+}
+.rightContainer{
+    width: 20%;
+    background-color: rgb(94, 98, 131) ;
+    padding: 10px;
+    height: auto;
+}
+
+.espacoRAM{
+    background-color: rgb(177, 180, 179);
+    /* Removendo position: absolute para que contribua para a altura do pai */
+    /* top e left também são removidos pois não são mais necessários com flexbox */
+    /* Para que cresça com o conteúdo, não definimos altura fixa */
+    margin-right: 10px; /* Espaçamento à direita se houver outros elementos no fluxo */
+    max-width: 30%; /* Mantém a largura máxima desejada, como solicitado anteriormente para a RAM */
+    flex-shrink: 0; /* Impede que encolha se houver outros elementos flexíveis */
+    padding: 10px; /* Adiciona um padding interno para o conteúdo */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Cria 2 colunas de largura igual */
+    gap: 10px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid black;    
+}
+
+.espacoDisco{
+    width: 50%;
+}
+.espaco{
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    color: black;
+    border-radius: 5px;
+    font-family: monospace;
+    font-weight: bold;
+    height: 100px;
+    padding: 20px;
+    width: 80px;
+    background-color: white;
+    /* Adiciona uma transição suave para a mudança de cor */
+    transition: background-color 0.5s ease-in-out;
 }
 
 .disco{
     position: absolute;
     top: 10px;
-    right: 10px; /* Distância da direita */
-    background-color: rgb(0, 81, 255); /* Cor de exemplo */
-    padding: 50px;
+    right: 40px; /* Distância da direita */
+    background-color: rgb(119, 135, 170); /* Cor de exemplo */
+    padding: 20px;
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius:10px;
+     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+
 .filaAguardando{
+    height: auto;
     position: absolute;
-    bottom: 10px; /* Distância do fundo */
+    bottom: 10px; 
     right: 10px;
-    background-color: rgb(255, 230, 0); /* Cor de exemplo */
+    background-color: rgb(177, 180, 179);
     padding: 50px;
+    height: 100px !important;
+    justify-content: center;
+    align-items: center;
     width:500px;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Cria 2 colunas de largura igual */
+    gap: 10px;
 }
 
 /* Container das páginas */
@@ -63,7 +125,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr; /* Cria 2 colunas de largura igual */
     gap: 10px;
-    height: 100vh;
+    height: auto;
 }
 
 /* Estilo genérico para cada página individual */
@@ -76,6 +138,10 @@ body{
     border-radius: 5px;
     font-family: monospace;
     font-weight: bold;
+    height: 100px;
+    padding: 10px;
+    /* Adiciona uma transição suave para a mudança de cor e borda */
+    transition: background-color 0.5s ease-in-out, border 0.5s ease-in-out;
 }
 
 .pagina1{ background-color: red; }
@@ -89,22 +155,21 @@ body{
 .pagina9{ background-color: palevioletred; }
 .pagina10{ background-color: gold; }
 
-.espaco {
-    min-height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    border-radius: 5px;
-    font-family: monospace;
+/* Estilo para o botão de Reset */
+.reset-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
     font-weight: bold;
-    background-color: aqua;
+    color: white;
+    background-color: #c82333; /* Cor vermelha para indicar reset */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-
-.espacoRAM{
-
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Cria 2 colunas de largura igual */
-    gap: 10px;
-    height: 85vh;
-}   
+.reset-button:hover {
+    background-color: #a81d2a; /* Vermelho mais escuro ao passar o mouse */
+}
